@@ -9,7 +9,7 @@ of the months with their names, and a variable which would help in comparing the
 Next I create a loop that will run 12 times. In this loop I would generate a random number, 
 which will be considered the rainfall value. This and the corresponding month in months array
 would be assigned to a month object and pushed into the rainfall array. Now we can loop through the array and 
-compare values to see which is larger and display it!
+compare values to see which is smallest and display it!
 */
 
 // Pseudocode
@@ -25,7 +25,7 @@ Loop once for each month in the month array:
     Push an object of month with a values of rainMonth and rainValue.
 Loop through the rainfall array:
     if the month position + 1 is NOT undefined:
-        if rainValue for the month position is greater than month position + 1:
+        if rainValue for the month position is less than month position + 1:
             make counter month position.
         else if the rainValues are equal:
             make counter month position.
@@ -35,9 +35,9 @@ Loop through the rainfall array:
 --Display Values--
 Display "Welcome to Rainfall"
 Display "I have aggregated the last 12 months of rainfall,"
-Display "and figured out which month had the most rain!"
+Display "and figured out which month had the least rain!"
 Display `My results indicate that ${rainfall[counter].rainMonth} had the most rain.`
-Display `${rainfall[counter].rainMonth} had a whopping ${rainfall[counter].rainValue} inches of rain!`
+Display `${rainfall[counter].rainMonth} had a total of ${rainfall[counter].rainValue} inches of rain!`
 Display "Thank you for using Rainfall!"
 */
 
@@ -57,7 +57,7 @@ for(var i = 0, cnt = MONTHS.length; i < cnt; i++) {
 
 for(var i = 0, cnt = rainfall.length; i < cnt; i++){
     if (rainfall[i + 1] != undefined){
-        if(rainfall[i].rainValue > rainfall[i + 1].rainValue){
+        if(rainfall[i].rainValue < rainfall[i + 1].rainValue){
             counter = i;    
         } else if (rainfall[i].rainValue == rainfall[i + 1].rainValue){
             counter = i;
@@ -70,7 +70,7 @@ for(var i = 0, cnt = rainfall.length; i < cnt; i++){
 // Display Values
 console.log("Welcome to Rainfall");
 console.log("I have aggregated the last 12 months of rainfall,");
-console.log("and figured out which month had the most rain!");
+console.log("and figured out which month had the least rain!");
 console.log(`My results indicate that ${rainfall[counter].rainMonth} had the most rain.`);
-console.log(`${rainfall[counter].rainMonth} had a whopping ${rainfall[counter].rainValue} inches of rain!`);
+console.log(`${rainfall[counter].rainMonth} had a total of ${rainfall[counter].rainValue} inches of rain!`);
 console.log("Thank you for using Rainfall!");
