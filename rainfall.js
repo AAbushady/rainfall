@@ -28,8 +28,8 @@ Assign rainfall to rainfall being sorted from lowest to highest.
 Display "Welcome to Rainfall"
 Display "I have aggregated the last 12 months of rainfall,"
 Display "and figured out which month had the least rain!"
-Display `My results indicate that ${rainfall[counter].rainMonth} had the most rain.`
-Display `${rainfall[counter].rainMonth} had a total of ${rainfall[counter].rainValue} inches of rain!`
+Display `My results indicate that ${rainfall[0].rainMonth} had the most rain.`
+Display `${rainfall[0].rainMonth} had a total of ${rainfall[0].rainValue}" of rain!`
 Display "Thank you for using Rainfall!"
 */
 
