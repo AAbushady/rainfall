@@ -57,5 +57,5 @@ console.log("Welcome to Rainfall\n");
 console.log("I have aggregated the last 12 months of rainfall,");
 console.log("and figured out which month had the least rain! \n");
 console.log(`My results indicate that ${rainfall[0].rainMonth} had the least rain.\n`);
-console.log(`${rainfall[0].rainMonth} had a total of ${rainfall[0].rainValue} inches of rain!\n`);
+console.log(`${rainfall[0].rainMonth} had a total of ${rainfall[0].rainValue}" of rain!\n`);
 console.log("Thank you for using Rainfall!");
