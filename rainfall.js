@@ -1,15 +1,3 @@
-/*
-Write a program that stores the total rainfall for each of the 12 months of the year into an array. 
-Use a random number for the rainfall’s value. 
-The program should determine which of the months had the least amount of rain.
-
-I would first create a variable for the rainfall array and for an array holding the months.
-Next I would declare a sorting function to use when we want to sort the array for gettting the lowest
-rainfall value. After that It would be time to make a loop to populate the rainfall array with month prototypes,
-these would have a month value and a rainfall value. Now we make use of the sort function, and display the
-lowest month of rainfall.
-*/
-
 // Pseudocode
 /*
 --Variables and Constants--
@@ -36,13 +24,17 @@ Display "Thank you for using Rainfall!"
 // Constants and Variables
 var rainfall = [];
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+// This will sort the rainfall array allowing to easily grab the month with the least rainfall.
 var sortFn = function(a, b) {
+    // Compare rainValue Specifically.
     return a.rainValue - b.rainValue;
 }
 
 
 // Calculations
+// This part loops through and asssings a random value between 1 - 10 to serve as inches of rain.
 for(var i = 0, cnt = MONTHS.length; i < cnt; i++) {
+    // Creating a month prototype for filling the array with.
     let month = {
         rainMonth: MONTHS[i],
         rainValue: Math.ceil(Math.random() * 10)
@@ -50,6 +42,7 @@ for(var i = 0, cnt = MONTHS.length; i < cnt; i++) {
     rainfall.push(month);
 }
 
+// Using the sort function.
 rainfall = rainfall.sort(sortFn);
 
 // Display Values
